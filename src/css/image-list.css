@@ -11,11 +11,15 @@
   margin-top: 20px;
 }
 
-.test_item {
+.image-holder {
   background-color: rebeccapurple;
   color: white;
   border-radius: 5px;
   padding: 1px 5px;
   box-sizing: border-box;
   height: 40px;
+}
+
+.image-holder[active] {
+  background-color: red;
 }
