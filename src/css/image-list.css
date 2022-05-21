@@ -1,0 +1,13 @@
+#image_list {
+  width: 300px;
+  overflow-y: scroll;
+  max-height: 100%;
+  float: left;
+}
+.test_item {
+  /* height: 30px; */
+  margin-top: 20px;
+  background-color: beige;
+  border-radius: 5px;
+  padding: 1px 5px;
+}

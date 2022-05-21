@@ -1,0 +1,25 @@
+#image_viewer {
+  margin-left: 300px;
+  max-height: 100%;
+  align-content: center;
+}
+#display_image {
+  height: 90%;
+  width: auto;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  display: block;
+  border-radius: 5px;
+}
+#image_title {
+  width: 100%;
+}
+input {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  display: block;
+}
