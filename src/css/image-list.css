@@ -1,13 +1,21 @@
-#image_list {
+#image-list {
   width: 300px;
   overflow-y: scroll;
   max-height: 100%;
   float: left;
+  padding: 0px 10px;
+  box-sizing: border-box;
 }
-.test_item {
-  /* height: 30px; */
+
+#image-list > * + * {
   margin-top: 20px;
-  background-color: beige;
+}
+
+.test_item {
+  background-color: rebeccapurple;
+  color: white;
   border-radius: 5px;
   padding: 1px 5px;
+  box-sizing: border-box;
+  height: 40px;
 }
