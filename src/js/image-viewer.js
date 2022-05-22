@@ -50,8 +50,16 @@ class ImageViewer {
   }
   updateTitle(newTitle) {
     this.imagelist[this.currIdx].title = newTitle;
-    document.getElementById("image-title-" + String(this.currIdx)).innerText =
-      newTitle;
+    let fullTitle = newTitle;
+    let splitIndex = Math.round(fullTitle.length * 0.75);
+    let leftTitle = fullTitle.slice(0, splitIndex);
+    let rightTitle = fullTitle.slice(splitIndex);
+    document.getElementById(
+      "image-title-left-" + String(this.currIdx)
+    ).innerText = leftTitle;
+    document.getElementById(
+      "image-title-right-" + String(this.currIdx)
+    ).innerText = rightTitle;
   }
 }
 
