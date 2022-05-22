@@ -17,6 +17,10 @@ function addAllEventListeners(image_viewer) {
       image_viewer.nextImage();
     }
   });
+
+  document.getElementById("display_title").addEventListener("change", (e) => {
+    image_viewer.updateTitle(e.currentTarget.value);
+  });
 }
 
 var image_viewer = null;
@@ -26,8 +30,13 @@ fetch("/src/data/content.json")
     var image_json = await res.json();
     let ImageList = populateImageList(image_json);
 
-    image_viewer = new ImageViewer(image_json, ImageList, "display_image");
-    image_viewer.updateState(0);
+    image_viewer = new ImageViewer(
+      image_json,
+      ImageList,
+      "display_image",
+      "display_title"
+    );
+    image_viewer.updateState(-1);
 
     ImageList.forEach((item) => {
       document.getElementById("image-list").appendChild(item);

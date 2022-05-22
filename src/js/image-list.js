@@ -1,10 +1,10 @@
 const populateImageList = (json) => {
-  const ImageList = json.map((item) => {
+  const ImageList = json.map((item, idx) => {
     const icon = document.createElement("div");
     icon.setAttribute("data-src", item.image_src);
     icon.className = "image-holder";
     icon.innerHTML = `
-    <span>${item.title}</span>
+    <span id="image-title-${idx}">${item.title}</span>
     `;
     return icon;
   });

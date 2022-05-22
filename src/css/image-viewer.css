@@ -16,10 +16,22 @@
 #image_title {
   width: 100%;
 }
-input {
+#display_title {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
   display: block;
+  outline: none;
+  text-align: center;
+  border: none;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  box-sizing: border-box;
+}
+
+#display_title:focus {
+  border: 1px solid #555;
+  border-radius: 2px;
+  /* outline: none; */
 }
