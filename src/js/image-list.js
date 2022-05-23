@@ -1,7 +1,7 @@
 const populateImageList = (json) => {
   const ImageList = json.map((item, idx) => {
     const icon = document.createElement("div");
-    icon.setAttribute("data-src", item.image_src);
+    icon.setAttribute("data-src", item.previewImage);
     icon.className = "image-holder";
 
     let fullTitle = item.title;
@@ -10,7 +10,7 @@ const populateImageList = (json) => {
     let rightTitle = fullTitle.slice(splitIndex);
 
     icon.innerHTML = `
-    <img class="image-icon" src="${item.image_src}"/>
+    <img class="image-icon" src="${item.previewImage}"/>
     <div class="image-title-left" id="image-title-left-${idx}">${leftTitle}</div>
     <div class="image-title-right" id="image-title-right-${idx}">${rightTitle}</div>
     `;

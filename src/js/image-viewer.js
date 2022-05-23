@@ -44,7 +44,7 @@ class ImageViewer {
 
     document
       .getElementById(this.viewerID)
-      .setAttribute("src", this.imagelist[idx].image_src);
+      .setAttribute("src", this.imagelist[idx].previewImage);
 
     document.getElementById(this.titleID).value = this.imagelist[idx].title;
   }
